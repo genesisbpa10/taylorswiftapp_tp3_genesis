@@ -5,8 +5,8 @@ import java.util.Scanner;
 import models.Album;
 
 public class Discografia {
-    
-    public static void recorrerDiscografia(){
+
+    public static void recorrerDiscografia() {
         System.out.println("Hola, escogiste recorrer la discografía de Taylor. ¡Excelente opción!");
         ArrayList<Album> discografia = InicializadorAlbumes.inicializarAlbumes();
 

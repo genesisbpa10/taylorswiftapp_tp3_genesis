@@ -1,20 +1,21 @@
 package models.favorites;
 
 import java.util.ArrayList;
-//Falta implementar el método abstracto que viene de ListaFavoritos
 
-//Atributos de Lista de Álbumes Favoritas, si es necesario agregarles
 public class ListaAlbumesFavoritos extends ListaFavoritos {
+    // Atributos
 
+    // Atributo propio de Lista de Álbumes Favoritos, a implementar próximamente
     private String descripcionAlbumFavorito;
 
     public ListaAlbumesFavoritos(String nombreLista, ArrayList<String> itemsLista, String descripcionAlbumFavorito) {
         super(nombreLista, itemsLista);
-        this.descripcionAlbumFavorito= descripcionAlbumFavorito;
+        this.descripcionAlbumFavorito = descripcionAlbumFavorito;
+
     }
+    // Métodos
 
     // Setteres y getters
-
     public void setDescripcionAlbumFavorito(String descripcionAlbumFavorito) {
         this.descripcionAlbumFavorito = descripcionAlbumFavorito;
     }
@@ -23,6 +24,7 @@ public class ListaAlbumesFavoritos extends ListaFavoritos {
         return descripcionAlbumFavorito;
     }
 
+    // Sobreescritura del método abstracto heredado
     @Override
     public void mostrarInformación() {
         System.out.println("Nombre de la lista de álbumes favoritos: " + getNombreLista());
@@ -32,6 +34,4 @@ public class ListaAlbumesFavoritos extends ListaFavoritos {
             System.out.println("- " + album);
         }
     }
-    // Otros métodos
-
 }

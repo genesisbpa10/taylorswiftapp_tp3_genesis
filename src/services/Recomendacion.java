@@ -18,10 +18,11 @@ public class Recomendacion {
         String cancionRecomendada = cancionesDelAlbum.get(random.nextInt(cancionesDelAlbum.size()));
 
         // Mostrar la recomendación al usuario
-        System.out.println("Hola, tu recomendación de hoy es:");
+        System.out.println("Tu recomendación de hoy es:");
         System.out.println("Canción: " + cancionRecomendada);
         System.out.println("Pertenece al álbum: " + albumRecomendado.getTituloAlbum());
+        System.out.println("¡Espero que la disfrutes!");
 
-        // Más funcionalidad
+        // Más funcionalidad para agregar próximamente
     }
 }

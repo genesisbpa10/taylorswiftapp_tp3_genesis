@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class ListaCancionesFavoritos extends ListaFavoritos {
 
-    // Atributos de Lista de Canciones Favoritas, si es necesario agregarles
-    private String descripcionCancionFavorita;
-
     // Atributos
+
+    // Atributo propio de Lista de Canciones Favoritas, a implementar próximamente
+    private String descripcionCancionFavorita;
 
     public ListaCancionesFavoritos(String nombreLista, ArrayList<String> itemsLista, String descripcionCancionFavorita) {
         super(nombreLista, itemsLista);
@@ -15,6 +15,8 @@ public class ListaCancionesFavoritos extends ListaFavoritos {
     }
 
     // Métodos 
+        
+    // Setteres y getters
     public void setDescripcionCancionFavorita(String descripcionCancionFavorita){
         this.descripcionCancionFavorita= descripcionCancionFavorita;
     }
@@ -22,6 +24,7 @@ public class ListaCancionesFavoritos extends ListaFavoritos {
         return descripcionCancionFavorita;
     }
 
+    //Sobreescritura del método abstracto heredado
     @Override
     public void mostrarInformación() {
         System.out.println("Nombre de la lista de canciones favoritas: " + getNombreLista());

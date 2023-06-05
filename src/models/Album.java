@@ -3,12 +3,15 @@ package models;
 import java.util.ArrayList;
 
 public class Album {
+
     // Atributos
+    
     private String tituloAlbum;
     private int anioLanzamiento;
     private ArrayList<String> cancionesDelAlbum;
 
     // Métodos constructores
+    
     public Album() {
 
     }
@@ -46,5 +49,5 @@ public class Album {
         return cancionesDelAlbum;
     }
 
-    // Otros métodos
+    // Otros métodos para agregar próximamente
 }

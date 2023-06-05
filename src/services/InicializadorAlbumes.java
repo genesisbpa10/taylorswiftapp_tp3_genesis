@@ -75,6 +75,7 @@ public class InicializadorAlbumes {
         Album album8 = new Album("Folklore", 2020, cancionesAlbum8);
         Album album9 = new Album("Evermore", 2020, cancionesAlbum9);
         Album album10 = new Album("Midnights", 2022, cancionesAlbum10);
+        
         // Crear lista con todos los álbumes
         ArrayList<Album> discografia = new ArrayList<>();
         discografia.add(album1);
