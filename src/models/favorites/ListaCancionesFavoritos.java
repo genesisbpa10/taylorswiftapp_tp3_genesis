@@ -14,14 +14,6 @@ public class ListaCancionesFavoritos extends ListaFavoritos {
         this.descripcionCancionFavorita = descripcionCancionFavorita;
     }
 
-    // Métodos que no son necesarios reescribir porque vienen desde la clases abstracta ListaFavoritos
-    // public void setItemsLista(ArrayList<String> itemsLista){
-    //     this.itemsLista= itemsLista;
-    // }
-    // public ArrayList<String> getItemsLista() {
-    //     return itemsLista;
-    // }
-
     // Métodos 
     public void setDescripcionCancionFavorita(String descripcionCancionFavorita){
         this.descripcionCancionFavorita= descripcionCancionFavorita;
