@@ -47,5 +47,4 @@ public class Album {
     }
 
     // Otros métodos
-    // Por ahora ninguno
 }
