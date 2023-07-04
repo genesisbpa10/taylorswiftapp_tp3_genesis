@@ -41,6 +41,11 @@ public class Discografia {
             index++;
         }
 
+        // Agregamos una pausa para que el usuario pueda leer la información antes de volver al menú principal
+        scanner.nextLine();
+        System.out.print("Presiona Enter para volver al menú principal...");
+
+        // Cerramos el scanner
         scanner.close();
     }
 }

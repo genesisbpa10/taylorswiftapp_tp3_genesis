@@ -5,42 +5,46 @@ import services.Discografia;
 import services.Recomendacion;
 import services.Lista;
 
+
 public class App {
-
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String opcion;
 
-        System.out.println("¡Bienvenidx!");
-        System.out.print("Por favor, ingresa tu nombre: ");
+        System.out.print("¡Bienvenido a la aplicación de Taylor Swift! Por favor, introduce tu nombre: ");
         String nombreUsuario = scanner.nextLine();
+        System.out.println("¡Hola, " + nombreUsuario + "!");
 
-        System.out.println("Hola, " + nombreUsuario + "! ¿En qué puedo ayudarte?");
-        System.out.println("1) Recorrido por la discografía de Taylor Swift");
-        System.out.println("2) Recomendación de alguna canción aleatoria");
-        System.out.println("3) Crear una lista de álbumes o canciones favoritos");
+        do {
+            System.out.println("\nSelecciona una opción:");
+            System.out.println("1. Recorrer la discografía");
+            System.out.println("2. Crear una lista de favoritos");
+            System.out.println("3. Generar una recomendación");
+            System.out.println("4. Salir");
+            System.out.print("Ingresa la opción de tu preferencia: ");
+            
+            opcion = scanner.nextLine();
 
-        System.out.print("Ingresa el número de la opción que deseas: ");
-        int opcion = scanner.nextInt();
+            switch (opcion) {
+                case "1":
+                    Discografia.recorrerDiscografia(); // Llama al método para recorrer la discografía
+                    break;
+                case "2":
+                    Lista.crearListaFavoritos(); // Llama al método para crear una lista de favoritos
+                    break;
+                case "3":
+                    Recomendacion.generarRecomendacion(); // Llama al método para generar una recomendación
+                    break;
+                case "4":
+                    System.out.println("\n¡Hasta luego, " + nombreUsuario + "!"); // Mensaje de despedida al usuario
+                    break;
+                default:
+                    System.out.println("Opción no válida. Por favor, selecciona una opción válida.");
+                    break;
+            }
 
-        switch (opcion) {
-            case 1:
-                // Lógica para el recorrido por la discografía de Taylor Swift
-                Discografia.recorrerDiscografia();
-                break;
-            case 2:
-                // Lógica para la recomendación de algún álbum aleatorio
-                Recomendacion.generarRecomendacion();
-                break;
-            case 3:
-                // Lógica para crear una lista de álbumes o canciones favoritos
-                Lista.crearListaFavoritos();
-                break;
-            default:
-                System.out.println("Opción inválida. Por favor, ingresa un número válido.");
-                break;
-        }
+        } while (!opcion.equals("4"));
 
-        scanner.close();
+        scanner.close(); // Cierra el Scanner al salir del bucle
     }
-
 }
